@@ -6,7 +6,8 @@ const AccountsTable = () => {
   const [accounts, setAccounts] = useState([]);
   useEffect(() => {
     // effect
-    const baseUrl = "http://localhost:5000/api/accounts/";
+    // const baseUrl = "http://localhost:5000/api/accounts/";
+    const baseUrl = "https://bank-backend1.herokuapp.com/api/accounts/";
     axios.get(baseUrl).then(function (response) {
       console.log(response);
       setAccounts(response.data.users);
